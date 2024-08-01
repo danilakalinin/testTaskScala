@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ChatController">
+    <center>
+        <TextArea fx:id="chatArea" editable="false" />
+    </center>
+    <bottom>
+        <HBox spacing="10">
+            <TextField fx:id="messageInput" promptText="Enter your message"/>
+            <Button text="Send" onAction="#sendMessage" />
+        </HBox>
+    </bottom>
+</BorderPane>

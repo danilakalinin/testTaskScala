@@ -1,0 +1,32 @@
+plugins {
+    id 'scala'
+    id 'application'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.13.12'
+    implementation 'com.typesafe.akka:akka-actor-typed_2.13:2.8.3'
+    implementation 'com.typesafe.akka:akka-cluster-typed_2.13:2.8.3'
+    implementation 'com.typesafe.akka:akka-cluster-tools_2.13:2.8.3'
+    implementation 'org.openjfx:javafx-controls:20.0.1'
+    implementation 'org.openjfx:javafx-fxml:20.0.1'
+    testImplementation 'org.scalatest:scalatest_2.13:3.2.15'
+}
+
+application {
+    mainClass = 'com.example.Main'
+}
+
+run {
+    jvmArgs = ['-Djava.library.path="C:/Program Files/javafx-sdk-22.0.2/lib"']
+}
